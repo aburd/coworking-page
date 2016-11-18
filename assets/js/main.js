@@ -38,7 +38,7 @@
 
 	var sliderMain = function() {
 		
-	  	$('#fh5co-hero .flexslider').flexslider({
+	  	$('#hero-slider .flexslider').flexslider({
 			animation: "fade",
 			slideshowSpeed: 5000,
 			directionNav: true,
@@ -57,9 +57,9 @@
 
 	  	});
 
-	  	$('#fh5co-hero .flexslider .slides > li').css('height', $(window).height());	
+	  	$('#hero-slider .flexslider .slides > li').css('height', $(window).height());	
 	  	$(window).resize(function(){
-	  		$('#fh5co-hero .flexslider .slides > li').css('height', $(window).height());	
+	  		$('#hero-slider .flexslider .slides > li').css('height', $(window).height());	
 	  	});
 
 	};
@@ -141,14 +141,14 @@
 
 
 	var toggleBtnColor = function() {
-		if ( $('#fh5co-hero').length > 0 ) {	
-			$('#fh5co-hero').waypoint( function( direction ) {
+		if ( $('#hero-slider').length > 0 ) {	
+			$('#hero-slider').waypoint( function( direction ) {
 				if( direction === 'down' ) {
 					$('.fh5co-nav-toggle').addClass('dark');
 				}
-			} , { offset: - $('#fh5co-hero').height() } );
+			} , { offset: - $('#hero-slider').height() } );
 
-			$('#fh5co-hero').waypoint( function( direction ) {
+			$('#hero-slider').waypoint( function( direction ) {
 				if( direction === 'up' ) {
 					$('.fh5co-nav-toggle').removeClass('dark');
 				}

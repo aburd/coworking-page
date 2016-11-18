@@ -548,7 +548,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
-#fh5co-hero {
+#hero-slider {
 	position: relative;
 	min-height: 700px;
 	background: $brand-white url(../images/loader.gif) no-repeat center center;
@@ -634,15 +634,14 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
-#fh5co-services-section, #locations, #fh5co-testimony-section,
-#fh5co-blog-section {
+#features, #locations {
 	padding: 7em 0;
 	@media screen and (max-width: $screen-sm) {
 		padding: 3em 0;
 	}	
 }
 
-#fh5co-services-section {
+#features {
 	.services {
 		position: relative;
 		i{
@@ -1013,7 +1012,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
-#fh5co-footer {
+#footer {
 	color: $brand-gray;
 	padding: 7em 0;
 	float: left;
