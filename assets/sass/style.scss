@@ -128,7 +128,7 @@ body {
 }
 
 a {
-	color: $brand-primary;
+	color: $brand-yellow;
 	@include transition(.5s);
 	&:hover, &:active, &:focus {
 		color: $brand-primary;
@@ -159,6 +159,13 @@ h1, h2, h3, h4, h5, h6, figure {
   background: $brand-primary;
 }
 
+// Navigation
+nav {
+	.cta {
+		font-size: 20px;
+		font-weight: bold;
+	}
+}
 
 // Buttons
 .btn {

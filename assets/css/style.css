@@ -24,7 +24,7 @@ body {
 }
 
 a {
-  color: #503216;
+  color: #e0a33a;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -58,6 +58,11 @@ h1, h2, h3, h4, h5, h6, figure {
 ::selection {
   color: #FFF9EF;
   background: #503216;
+}
+
+nav .cta {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .btn {
