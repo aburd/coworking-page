@@ -45,6 +45,14 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0 0 30px 0;
 }
 
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
 ::-webkit-selection {
   color: #FFF9EF;
   background: #503216;
@@ -254,6 +262,7 @@ nav .cta {
   box-shadow: none;
   background: transparent;
   border: 2px solid rgba(204, 204, 204, 0.5);
+  color: rgba(204, 204, 204, 0.7);
   height: 54px;
   font-size: 18px;
   font-weight: 300;
@@ -263,6 +272,7 @@ nav .cta {
   outline: none;
   box-shadow: none;
   border-color: #ccc;
+  color: #ccc;
 }
 
 .fh5co-social {
@@ -626,7 +636,6 @@ nav .cta {
 }
 
 #features .services .desc h3 {
-  font-size: 20px;
   font-weight: 700;
 }
 
@@ -1341,10 +1350,10 @@ nav .cta {
 }
 
 #pricing .pricing-plan {
-  font-family: Arial, sans-serif;
+  font-family: "Dancing Script", Arial, sans-serif;
   margin: 0 0 10px 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 26px;
   letter-spacing: 2px;
   font-weight: 700;
 }
@@ -1388,7 +1397,7 @@ nav .cta {
   padding: 0 15px;
 }
 
-#pricing .options h3 {
+#pricing .options h2 {
   margin: 0;
 }
 
