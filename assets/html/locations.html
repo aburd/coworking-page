@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Servcorp Coworking</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	
+	<div class="container">
+
+		<div class="col-xs-12">
+			<div id="locations"></div>
+		</div>
+		
+	</div>
+
+<!-- JS -->
+<script src="js/jquery.js"></script>
+<script src="js/handlebars.js"></script>
+<script id="location-template" type="text/x-handlebars-template">
+	{{#each coworkingLocations}}
+	<div class="col-md-6">
+		<img src="http://www.servcorp.co.jp/{{ThumbnailUrl}}" alt="">
+		<h3>{{namae}}</h3>
+		<p>
+			{{address}} <br>
+			0{{phoneNumber}}
+		</p>
+	</div>
+	{{/each}}
+</script>
+<script>
+	// setup handle bars to get the template, and then make it ready for compile
+	var source   = $("#location-template").html();
+	var template = Handlebars.compile(source);
+	// get the proper info, make it usable by handlebars, and then pass it to the template for compilation
+	$.getJSON('./json/locations.json', function(data){
+		var context = {};
+		context.allLocations = Object.keys(data).reduce(function(allLocations, city){
+			return allLocations.concat(data[city]);
+		}, []);
+		context.coworkingLocations = context.allLocations.filter(function(location){
+			return location.hasCo;
+		});
+		console.log(JSON.stringify(context.coworkingLocations))
+		var html = template(context);
+		$('#locations').html(html)
+
+	});
+	
+</script>
+
+</body>
+</html>
