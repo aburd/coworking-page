@@ -464,15 +464,13 @@ nav {
 		}
 		ul {
 			padding: 0;
-			margin: 0 -0px 0 0;
+			margin: 0;
 			line-height: 0;
 			li {
 				padding: 0;
 				margin: 0;
 				list-style: none;
 				@include inline-block;
-
-
 
 				a {
 					color: rgba($brand-primary,.7);
@@ -844,6 +842,9 @@ nav {
 			background-size: cover;
 			background-position: center center;
 		}
+		.btn-servcorp-cta {
+    	padding: 5px 20px;
+  	}
 		.v-align{
 			padding: 30px;
 			h3{
@@ -1326,7 +1327,7 @@ nav {
 		font-family: $font-secondary;
 		margin: 0 0 10px 0;
 		padding: 0;
-		font-size: 26px;
+		font-size: 23px;
 		letter-spacing: 2px;
 		font-weight: 700;
 

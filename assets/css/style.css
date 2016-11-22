@@ -419,7 +419,7 @@ nav .cta {
 
 #fh5co-header nav ul {
   padding: 0;
-  margin: 0 -0px 0 0;
+  margin: 0;
   line-height: 0;
 }
 
@@ -808,6 +808,10 @@ nav .cta {
   margin-bottom: 20px;
   background-size: cover;
   background-position: center center;
+}
+
+#fh5co-blog-section .item-grid .btn-servcorp-cta {
+  padding: 5px 20px;
 }
 
 #fh5co-blog-section .item-grid .v-align {
@@ -1353,7 +1357,7 @@ nav .cta {
   font-family: "Dancing Script", Arial, sans-serif;
   margin: 0 0 10px 0;
   padding: 0;
-  font-size: 26px;
+  font-size: 23px;
   letter-spacing: 2px;
   font-weight: 700;
 }
