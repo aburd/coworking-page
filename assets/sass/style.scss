@@ -712,6 +712,9 @@ nav {
 			background-size: cover;
 			background-position: center center;
 		}
+		.btn-servcorp-cta {
+    	padding: 5px 20px;
+  	}
 		.v-align{
 			padding: 30px;
 			h3{
@@ -817,53 +820,6 @@ nav {
 		span {
 			background: transparent;
 			border: 2px solid $brand-primary;
-		}
-	}
-}
-
-#fh5co-blog-section{
-	.item-grid{
-		width: 100%;
-		float: left;
-		position: relative;
-		background: $brand-white;
-		margin-bottom: 50px;
-		-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.11);
-		-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.11);
-		box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.11);
-		@include transition(.3s);
-		top: 2px;
-		.image{
-			// width: 100%;
-			// float: left;
-			height: 400px;
-			overflow: hidden;
-			margin-bottom: 20px;
-			background-size: cover;
-			background-position: center center;
-		}
-		.btn-servcorp-cta {
-    	padding: 5px 20px;
-  	}
-		.v-align{
-			padding: 30px;
-			h3{
-				font-weight: 700;
-				font-size: 20px;
-			}
-			h5{
-				color: rgba($brand-black,.3);
-			}
-			p{
-				color: lighten($brand-black,50%);
-			}
-		}
-		&:hover, &:focus{
-			text-decoration: none;
-			-webkit-box-shadow: 0px 14px 25px -2px rgba(0,0,0,0.14);
-			-moz-box-shadow: 0px 14px 25px -2px rgba(0,0,0,0.14);
-			box-shadow: 0px 14px 25px -2px rgba(0,0,0,0.14);
-			top: -2px;
 		}
 	}
 }
