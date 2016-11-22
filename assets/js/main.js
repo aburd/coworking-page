@@ -225,21 +225,6 @@
 		});
 	};
 
-	//***********
-	// POST REQUEST
-	//***********
-	// $('#main-contact-form').submit(function(e){
-	// 	e.preventDefault()
-	// 	var obj = $(this).serializeArray()
-	// 	var data = {}
-	// 	jQuery.each(obj, function(i, prop){
-	// 		data[prop.name] = prop.value
-	// 	})
-
-	// 	$.post("/", data, function(data){
-	// 	  console.log(data)
-	// 	})
-	// })
 
 	//***********
 	// HANDLEBARS TEMPLATING

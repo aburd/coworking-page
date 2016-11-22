@@ -647,7 +647,7 @@ nav {
 	}
 }
 
-#features, #locations {
+#features, #community, #locations, #faqs {
 	padding: 7em 0;
 	@media screen and (max-width: $screen-sm) {
 		padding: 3em 0;
@@ -689,6 +689,13 @@ nav {
 }
 .fh5co-services{
 	margin-top: 4em;
+}
+
+#community {
+	background: $brand-white;
+	img {
+		width: 100%;
+	}
 }
 
 #locations{
@@ -743,6 +750,33 @@ nav {
 }
 
 
+#faqs {
+	background: lighten($brand-black,99%);
+
+	img {
+		width: 100%;
+	}
+	.qa-line {
+		margin-bottom: 20px;
+		border-bottom: $brand-primary 1px solid;	
+		
+		h3, p { 
+			margin: 0; 
+		}
+		.question, .answer {
+			margin-bottom: 10px;
+		}
+		.question {
+			cursor: pointer;
+
+			& h3:before {
+				content: '+ ';
+			}
+		}
+		
+	}
+	.answer { display: none; }
+}
 
 .wrap-testimony{
 	position: relative;
@@ -1337,7 +1371,7 @@ nav {
 	}
 }
 
-.fh5co-light-grey-section{
+.light-grey-section{
 	background: rgba($brand-black,.03) !important;
 }
 

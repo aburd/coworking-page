@@ -609,12 +609,12 @@ nav .cta {
   color: #d9534f;
 }
 
-#features, #locations {
+#features, #community, #locations, #faqs {
   padding: 7em 0;
 }
 
 @media screen and (max-width: 768px) {
-  #features, #locations {
+  #features, #community, #locations, #faqs {
     padding: 3em 0;
   }
 }
@@ -657,6 +657,14 @@ nav .cta {
 
 .fh5co-services {
   margin-top: 4em;
+}
+
+#community {
+  background: #FFF9EF;
+}
+
+#community img {
+  width: 100%;
 }
 
 #locations .item-grid {
@@ -708,6 +716,39 @@ nav .cta {
 
 #locations .owl-carousel .owl-controls .owl-dot {
   margin-top: 10px;
+}
+
+#faqs {
+  background: #fcfcfc;
+}
+
+#faqs img {
+  width: 100%;
+}
+
+#faqs .qa-line {
+  margin-bottom: 20px;
+  border-bottom: #503216 1px solid;
+}
+
+#faqs .qa-line h3, #faqs .qa-line p {
+  margin: 0;
+}
+
+#faqs .qa-line .question, #faqs .qa-line .answer {
+  margin-bottom: 10px;
+}
+
+#faqs .qa-line .question {
+  cursor: pointer;
+}
+
+#faqs .qa-line .question h3:before {
+  content: '+ ';
+}
+
+#faqs .answer {
+  display: none;
 }
 
 .wrap-testimony {
@@ -1374,7 +1415,7 @@ nav .cta {
   color: #d14d13;
 }
 
-.fh5co-light-grey-section {
+.light-grey-section {
   background: rgba(0, 0, 0, 0.03) !important;
 }
 
