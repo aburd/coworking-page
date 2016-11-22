@@ -37,25 +37,38 @@
 	};
 
 	var sliderMain = function() {
-		
-	  	$('#hero-slider .flexslider').flexslider({
-			animation: "fade",
-			slideshowSpeed: 5000,
-			directionNav: true,
-			start: function(){
-				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
-			},
-			before: function(){
-				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
-			}
-
+		if(Modernizr.csstransitions) {
+			$('#hero-slider .flexslider').flexslider({
+				animation: "fade",
+				slideshowSpeed: 5000,
+				directionNav: true,
+				start: function(){
+					setTimeout(function(){
+						$('.slider-text').removeClass('animated fadeInUp');
+						$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+					}, 500);
+				},
+				before: function(){
+					setTimeout(function(){
+						$('.slider-text').removeClass('animated fadeInUp');
+						$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+					}, 500);
+				}
 	  	});
+		} else {
+			// support for browsers that don't have css3 transitions
+			$('#hero-slider .flexslider').flexslider({
+				animation: "fade",
+				slideshowSpeed: 5000,
+				directionNav: true,
+				start: function(){
+					setTimeout(function(){
+						$('.slider-text').animate({opacity: 1}, 1000)
+					}, 500);
+				}
+	  	});
+		}
+	  	
 
 	  	$('#hero-slider .flexslider .slides > li').css('height', $(window).height());	
 	  	$(window).resize(function(){
@@ -178,36 +191,41 @@
 		var i = 0;
 		$('.animate-box').waypoint( function( direction ) {
 
-			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-				
-				i++;
-
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .animate-box.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							var effect = el.data('animate-effect');
-							if ( effect === 'fadeIn') {
-								el.addClass('fadeIn animated');
-							} else if ( effect === 'fadeInLeft') {
-								el.addClass('fadeInLeft animated');
-							} else if ( effect === 'fadeInRight') {
-								el.addClass('fadeInRight animated');
-							} else {
-								el.addClass('fadeInUp animated');
-							}
-
-							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
-					});
+			if(Modernizr.csstransitions) {
+				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 					
-				}, 100);
-				
+					i++;
+
+					$(this.element).addClass('item-animate');
+					setTimeout(function(){
+
+						$('body .animate-box.item-animate').each(function(k){
+							var el = $(this);
+							setTimeout( function () {
+								var effect = el.data('animate-effect');
+								if ( effect === 'fadeIn') {
+									el.addClass('fadeIn animated');
+								} else if ( effect === 'fadeInLeft') {
+									el.addClass('fadeInLeft animated');
+								} else if ( effect === 'fadeInRight') {
+									el.addClass('fadeInRight animated');
+								} else {
+									el.addClass('fadeInUp animated');
+								}
+
+								el.removeClass('item-animate');
+							},  k * 200, 'easeInOutExpo' );
+						});
+						
+					}, 100);
+				}
+			} else {
+				// fallback for for browsers that don't support css animations
+				$('.animate-box').animate({opacity: 1}, 1000);
 			}
 
 		} , { offset: '85%' } );
+
 	};
 
 	var testimonialCarousel = function(){
@@ -224,6 +242,8 @@
 			autoHeight: false
 		});
 	};
+
+
 
 
 	//***********
