@@ -173,6 +173,9 @@ nav {
 	}
 }
 
+// Placeholder
+.placeholder { color: #aaa; }
+
 // Buttons
 .btn {
 	margin-right: 4px;
@@ -416,10 +419,18 @@ nav {
 		height: 80px;
 		padding-left: 20px;
 		padding-right: 20px;
-		// background: rgba(255, 255, 255, .8);
 		float: left;
 		width: 100%;
 		@include border-radius(7px);
+		h1 {
+			a {
+				padding-left: 30px;
+				background-image: url(../images/brown-servcorp-logo.png);
+				background-position: 0 6px;
+				background-size: 25px;
+				background-repeat: no-repeat;
+			}
+		}
 	}
 	h1 {
 		float: left;
@@ -579,11 +590,68 @@ nav {
 		background: rgba(0,0,0,0.5);
 	}
 	.flexslider {
+		min-width: 400px;
 		border: none;
-		
 		z-index: 1;
 		margin-bottom: 0;
+		
+		#features-panel {
+			position: absolute;
+			z-index: 2000;
+			color: $brand-white;
+			width: 100%;
+			height: 100%;
 
+			.outer {
+			    display: table;
+			    position: absolute;
+			    height: 100%;
+			    width: 100%;
+			}
+
+			.middle {
+			    display: table-cell;
+			    vertical-align: middle;
+			}
+
+			.inner {
+			  margin-left: auto;
+			  max-width: 500px;
+			}
+			@media screen and (max-width: $screen-sm) {
+				.inner {
+					margin-right: auto;
+				}
+			}
+
+			.features-container {
+				background: rgba($brand-primary, 0.7);
+				padding: 2em;
+				max-width: 500px;
+				float: right;
+				display: inline-block;
+
+				h1, h2, h3 {
+					color: $brand-white;
+				}
+				h2 {
+					font-size: 50px;
+				}
+				#featured-coworking-space {
+					padding: 10px;
+					background-color: $brand-white;
+					color: $brand-primary;
+					display: inline-block;
+					width: 100%;
+
+					a {
+						color: $brand-secondary;
+						font-weight: bold;
+					}
+				}
+			}
+			
+		}
 		.slides {
 				// margin-top: -5em;
 
@@ -665,7 +733,7 @@ nav {
 			color: $brand-primary;
 		}
 		.desc {
-			padding-left: 70px;
+			padding-left: 60px;
 			h3 {
 				font-weight: 700;
 			}
@@ -1197,13 +1265,13 @@ nav {
 	  font:bold 14px/.4 Helvetica;
 	  text-transform: uppercase;
 	  text-indent:-55px;
-	  background: $brand-black;
+	  background: $brand-primary;
 	  transition: all .2s ease-out;
 		 &::before, &::after {
 	  	  content:'';
 		  width: 30px;
 		  height: 2px;
-		  background: $brand-black;
+		  background: $brand-primary;
 		  position: absolute;
 		  left:0;
 		  @include transition(.2s);

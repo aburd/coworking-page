@@ -180,9 +180,16 @@
 		}
 		var aTags = document.querySelectorAll('.smooth')
 		for(var i = 0; i < aTags.length; i++) {
-			aTags[i].addEventListener("click", function(e) {
-				smoothify(e.target.hash)
-			})
+			if(aTags[i].addEventListener) {
+				aTags[i].addEventListener("click", function(e) {
+					smoothify(e.target.hash);
+				})
+			} else {
+				// support for older browsers
+				aTags[i].attachEvent("onclick", function(e) {
+					smoothify(e.target.hash);
+				})
+			}
 		}
 	}
 
@@ -244,6 +251,14 @@
 	};
 
 
+	// Support for placeholders in older browsers
+	if(!Modernizr.input.placeholder) {
+		$('input, textarea').placeholder();
+	} 
+	// No support for opacity
+	if(!Modernizr.opacity) {
+		$('#contact-section, .slides li').css('background-image', 'url(images/slide_2_opacity_added.jpg)');
+	}
 
 
 	//***********
@@ -257,8 +272,30 @@
 	var priceTemplate = Handlebars.compile(pricingSource);
 	// get the proper info, make it usable by handlebars, and then pass it to the template for compilation
 	$.getJSON('./json/coworking-locations.json', function(data){
+		var cheapestLocation = data
+			.map(function(location){
+				console.log(location.japan)
+				return {
+					name: location.name,
+					price: location.price,
+					city: location.address.split('<br>')[2].split(' ')[0],
+					japan: location.japan
+				}
+			})
+			.filter(function(location){
+				return location.japan
+			})
+			.reduce(function(min, location){
+				var locationPrice = Number(location.price.replace(/円|,/g, ''))
+				var minPrice = Number(min.price.replace(/円|,/g, ''))
+				return Math.min(minPrice, locationPrice) < minPrice ? location : min
+			})
+		$('#featured-coworking-space').html('<a href="#">'+cheapestLocation.name+'</a>' + ', ' + cheapestLocation.city + ' is only ' + cheapestLocation.price + ' per month!')
+
 		var context = {};
+		var exampleCity = "Level 1 Yusen Building<br>2-3-2 Marunouchi, Chiyoda-ku<br>Tokyo 100-0005 Japan";
 		context.locations = data;
+		
 		var html = template(context);
 		var priceHtml = priceTemplate(context);
 		$('#locations-body').html(html)
@@ -268,7 +305,7 @@
 			fullHeight();
 			sliderMain();
 			centerBlock();
-			responseHeight()
+			responseHeight();
 			mobileMenuOutsideClick();
 			offcanvasMenu();
 			burgerMenu();

@@ -60,11 +60,10 @@
 				<h1><a href="index.html">Servcorp Coworking</a></h1>
 				<nav role="navigation">
 					<ul>
-						<li><a href="#features" class="smooth">Why Servcorp?</a></li>
+						<li><a href="#features" class="smooth">About</a></li>
 						<li><a href="#locations" class="smooth">Locations</a></li>
 						<li><a href="#pricing" class="smooth">Pricing</a></li>
 						<li><a href="#contact-section" class="smooth">Contact</a></li>
-						<li><a href="#footer" class="smooth">About</a></li>
 						<li class="cta"><i class="icon-phone"></i> 0120 8945 44</li>
 					</ul>
 				</nav>
@@ -78,43 +77,71 @@
 	<!-- SLIDER -->
 	<aside id="hero-slider" class="js-fullheight">
 		<div class="flexslider js-fullheight">
+			<div id="features-panel">
+				
+				<div class="outer">
+					<div class="middle">
+						<div class="inner">
+							<div class="features-container">
+								<h2>A Coworking Community</h2>
+						   	<p>Servcorp's app connects you to a community of 35,000 professionals around the world.</p>
+								<p>
+									Featured Coworking Space: <br>
+									<span id="featured-coworking-space"></span>
+								</p>
+								<p>
+									<h3>What you get:</h3>
+									<ul>
+										<li>A premiere international business community</li>
+										<li>A strong &amp; trusted global directory</li>
+										<li>Premium and impressive environments</li>
+										<li>First-class IT and communications</li>
+										<li>Tools to grow your company</li>
+									</ul>
+								</p>
+								<p><a href="#features" class="btn btn-primary btn-lg smooth">Learn more</a></p>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<ul class="slides">
-		   	<li style="background-image: url(images/coworking-guy.jpg);">
+		   	<li style="background-image: url(images/coworking-guy-jp.jpg);">
 		   		<div class="overlay-gradient"></div>
-		   		<div class="opacity-slide"></div>
+		   		<!-- <div class="opacity-slide"></div> -->
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner">
-		   					<h2>The Community</h2>
-		   					<p><a href="#features" class="btn btn-primary btn-lg smooth">Learn more</a></p>
+		   							   					
 		   				</div>
 		   			</div>
 		   		</div>
 		   	</li>
 		   	<li style="background-image: url(images/slide_2.jpg);">
-		   		<div class="opacity-slide"></div>
+		   		<!-- <div class="opacity-slide"></div> -->
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner">
-		   					<h2>Work. Fun. Profit.</h2>
-		   					<p><a href="#features" class="btn btn-primary btn-lg smooth">Learn more</a></p>
+<!-- 		   					<h2>Work. Fun. Profit.</h2>
+		   					<p><a href="#features" class="btn btn-primary btn-lg smooth">Learn more</a></p> -->
 		   				</div>
 		   			</div>
 		   		</div>
 		   	</li>
 		   	<li style="background-image: url(images/slide_3.jpg);">
-		   		<div class="opacity-slide"></div>
+		   		<!-- <div class="opacity-slide"></div> -->
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner">
-		   					<h2>Or why do it?</h2>
-		   					<p><a href="#features" class="btn btn-primary btn-lg smooth">Learn more</a></p>
+<!-- 		   					<h2>Or why do it?</h2>
+		   					<p><a href="#features" class="btn btn-primary btn-lg smooth">Learn more</a></p> -->
 		   				</div>
 		   			</div>
 		   		</div>
 		   	</li>
-		  	</ul>
-	  	</div>
+		  </ul>
+	  </div>
 	</aside>
 
 	<!-- FEATURES -->
@@ -167,7 +194,7 @@
 					<div class="services">
 						<i class="icon-folder-open"></i>
 						<div class="desc">
-							<h3>A strong &amp; trusted global directoty</h3>
+							<h3>A strong &amp; trusted global directory</h3>
 							<p>Search, compare and find other clients, companies, members, events and groups globally. <a href="#community" class="smooth">Get more business</a> around the world.</p>
 						</div>
 					</div>
@@ -428,6 +455,8 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<!-- Flexslider -->
 	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Support for older browsers on placeholders -->
+	<script src="js/jquery.placeholder.js"></script>
 
 	<!-- Handlebars stuff -->
 	<script src="js/handlebars.js"></script>

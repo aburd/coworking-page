@@ -73,6 +73,10 @@ nav .cta {
   font-weight: bold;
 }
 
+.placeholder {
+  color: #aaa;
+}
+
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
@@ -369,6 +373,14 @@ nav .cta {
   border-radius: 7px;
 }
 
+#fh5co-header .header-inner h1 a {
+  padding-left: 30px;
+  background-image: url(../images/brown-servcorp-logo.png);
+  background-position: 0 6px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
 #fh5co-header h1 {
   float: left;
   padding: 0;
@@ -537,9 +549,70 @@ nav .cta {
 }
 
 #hero-slider .flexslider {
+  min-width: 400px;
   border: none;
   z-index: 1;
   margin-bottom: 0;
+}
+
+#hero-slider .flexslider #features-panel {
+  position: absolute;
+  z-index: 2000;
+  color: #FFF9EF;
+  width: 100%;
+  height: 100%;
+}
+
+#hero-slider .flexslider #features-panel .outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#hero-slider .flexslider #features-panel .middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#hero-slider .flexslider #features-panel .inner {
+  margin-left: auto;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  #hero-slider .flexslider #features-panel .inner {
+    margin-right: auto;
+  }
+}
+
+#hero-slider .flexslider #features-panel .features-container {
+  background: rgba(80, 50, 22, 0.7);
+  padding: 2em;
+  max-width: 500px;
+  float: right;
+  display: inline-block;
+}
+
+#hero-slider .flexslider #features-panel .features-container h1, #hero-slider .flexslider #features-panel .features-container h2, #hero-slider .flexslider #features-panel .features-container h3 {
+  color: #FFF9EF;
+}
+
+#hero-slider .flexslider #features-panel .features-container h2 {
+  font-size: 50px;
+}
+
+#hero-slider .flexslider #features-panel .features-container #featured-coworking-space {
+  padding: 10px;
+  background-color: #FFF9EF;
+  color: #503216;
+  display: inline-block;
+  width: 100%;
+}
+
+#hero-slider .flexslider #features-panel .features-container #featured-coworking-space a {
+  color: #3f95ea;
+  font-weight: bold;
 }
 
 #hero-slider .flexslider .slides {
@@ -632,7 +705,7 @@ nav .cta {
 }
 
 #features .services .desc {
-  padding-left: 70px;
+  padding-left: 60px;
 }
 
 #features .services .desc h3 {
@@ -1225,7 +1298,7 @@ nav .cta {
   font: bold 14px/.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
-  background: #000;
+  background: #503216;
   -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
 }
@@ -1234,7 +1307,7 @@ nav .cta {
   content: '';
   width: 30px;
   height: 2px;
-  background: #000;
+  background: #503216;
   position: absolute;
   left: 0;
   -webkit-transition: 0.2s;
