@@ -468,6 +468,7 @@
 	<script id="location-template" type="text/x-handlebars-template">
 		{{#each locations}}
 		<div class="col-md-4">
+			<a id="{{url}}"></a>
 			<div class="item-grid text-center">
 				<div class="owl-carousel-fullwidth">
 					<div class="item">
@@ -485,7 +486,7 @@
 						<h3 class="title">{{name}}</h3>
 						<h5 class="category">{{{address}}}</h5>
 						<h5 class="category">
-						{{#if japan}}0{{/if}}{{phoneNumber}}
+						{{#if japan}}+81 {{/if}}{{phoneNumber}}
 						</h5>
 						<a href="#contact-section" class="btn btn-servcorp-cta btn-sm smooth">Contact Us</a>
 						<a href="#pricing" class="btn btn-servcorp-cta btn-sm smooth">Pricing</a>
