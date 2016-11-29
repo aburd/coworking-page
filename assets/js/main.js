@@ -70,7 +70,7 @@
 		}
 	  	
 
-	  	$('#hero-slider .flexslider .slides > li').css('height', $(window).height());	
+	  	$('#hero-slider .flexslider .slides > li').css('height', $(window).height() < 750 ? 750 : (window).height());	
 	  	$(window).resize(function(){
 	  		$('#hero-slider .flexslider .slides > li').css('height', $(window).height());	
 	  	});
@@ -272,30 +272,6 @@
 	var priceTemplate = Handlebars.compile(pricingSource);
 	// get the proper info, make it usable by handlebars, and then pass it to the template for compilation
 	$.getJSON('./json/coworking-locations.json', function(data){
-		// Get cheapest location out of all locations
-		var cheapestLocation = data
-			.map(function(location){
-				return {
-					name: location.name,
-					price: location.price,
-					city: location.address.split('<br>')[2].split(' ')[0],
-					japan: location.japan,
-					url: location.url,
-					phoneNumber: location.phoneNumber
-				}
-			})
-			.filter(function(location){
-				return location.japan
-			})
-			.reduce(function(min, location){
-				var locationPrice = Number(location.price.replace(/¥|,/g, ''))
-				var minPrice = Number(min.price.replace(/¥|,/g, ''))
-				return minPrice < locationPrice
-					? min
-					: location
-			})
-		// Construct a string from the cheapest location and put in tag
-		$('#featured-coworking-space').html('Special offer at <a href="#'+cheapestLocation.url+'" class="smooth">'+cheapestLocation.name+', '+cheapestLocation.city+'</a>.<br>First 2 months at half price ' + cheapestLocation.price + '/month!<br>No further obligation! Call <span class="phone-number">+81 '+cheapestLocation.phoneNumber+'</span>')
 
 		var context = {};
 		context.locations = data;

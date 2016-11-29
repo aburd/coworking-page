@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	margin: 0 0 30px 0;
 }
 h2 {
-	font-size: 40px;
+	font-size: 3em;
 }
 h3 {
 	font-size: 26px;
@@ -407,8 +407,6 @@ nav {
 
 
 #fh5co-header {
-	// position: absolute;
-	// z-index: 1001;
 	width: 100%;
 	margin: 0;
 	@media screen and (max-width: $screen-sm) {
@@ -422,11 +420,13 @@ nav {
 		width: 100%;
 		@include border-radius(7px);
 		h1 {
+			font-family: arial;
+			font-weight: bold;
 			a {
 				padding-left: 30px;
 				background-image: url(../images/brown-servcorp-logo.png);
-				background-position: 0 6px;
-				background-size: 25px;
+				background-position: 4px 6px;
+				background-size: 22px;
 				background-repeat: no-repeat;
 			}
 		}
@@ -447,7 +447,7 @@ nav {
 				text-decoration: none;
 				outline: none;
 			}
-			&:after{
+/*			&:after{
 				position: absolute;
 				bottom: 6px;
 				right: -8px;
@@ -457,7 +457,7 @@ nav {
 				background: $brand-primary;
 				@include border-radius(50%);
 
-			}
+			}*/
 
 		}
 		
@@ -573,7 +573,7 @@ nav {
 
 #hero-slider {
 	position: relative;
-	min-height: 700px;
+	min-height: 800px;
 	background: $brand-white url(../images/loader.gif) no-repeat center center;
 	.btn {
 		font-size: 24px;
@@ -615,6 +615,7 @@ nav {
 
 			.inner {
 			  margin-left: auto;
+			  margin-right: 1em;
 			  max-width: 500px;
 			}
 			@media screen and (max-width: $screen-sm) {
@@ -625,7 +626,7 @@ nav {
 
 			.features-container {
 				background: rgba($brand-primary, 0.7);
-				padding: 2em;
+				padding: 1.7em;
 				max-width: 500px;
 				float: right;
 				display: inline-block;
@@ -635,6 +636,13 @@ nav {
 				}
 				h2 {
 					font-size: 50px;
+					margin-bottom: 10px;
+				}
+				.sub-text {
+					margin-bottom: 20px;
+				}
+				p, h3 {
+					margin-bottom: 15px;
 				}
 				#featured-coworking-space {
 					padding: 10px;
@@ -647,13 +655,14 @@ nav {
 						color: $brand-orange;
 						font-weight: bold;
 					}
+					.phone-number {
+						color: $brand-orange;
+					}
 				}
 			}
 			
 		}
 		.slides {
-				// margin-top: -5em;
-
 			position: relative;
 			overflow: hidden;
 			li {
@@ -665,8 +674,6 @@ nav {
 			}
 		}
 		.flex-control-nav {
-			// bottom: 200px;
-			// bottom: 20%;
 			bottom: 40px;
 			z-index: 1000;
 			li {
@@ -762,6 +769,18 @@ nav {
 	background: $brand-white;
 	img {
 		width: 100%;
+	}
+	.copy {
+		font-size: 2em;
+		font-weight: bold;
+		color: $brand-primary;
+	}
+	.sub-copy {
+		font-size: 1.5em;
+		font-weight: 100;
+		strong {
+			font-weight: 900;
+		}
 	}
 }
 

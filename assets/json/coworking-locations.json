@@ -17,9 +17,9 @@
     "jaAddress": "〒100-0005<br />東京都千代田区丸の内2-3-2<br />郵船ビルディング 1階",
     "BuildingName": "千代田区 - 丸の内郵船ビルディング",
     "largeImageUrl": "marunouchi-yusen-building.jpg",
-    "price":"23,250円", 
-    "communicationsPlan": "15,000円",
-    "addressPlan":"15,000円"  
+    "price":"¥46,500", 
+    "communicationsPlan": "¥15,000",
+    "addressPlan":"¥15,000"  
 }, {
     "name": "Ikebukuro Sunshine 60",
     "namae": "池袋サンシャイン60",
@@ -38,9 +38,9 @@
     "jaAddress": "〒170-6045<br />東京都豊島区東池袋3-1-1<br />サンシャイン60 45階",
     "BuildingName": "豊島区 - 池袋サンシャイン60",
     "largeImageUrl": "sunshine-city.jpg",
-    "price":"17,250円", 
-    "communicationsPlan": "15,000円",
-    "addressPlan":"15,000円"
+    "price":"¥34,500", 
+    "communicationsPlan": "¥15,000",
+    "addressPlan":"¥15,000"
 }, {
     "name": "Edobori Center Building",
     "namae": "江戸堀センタービル",
@@ -59,9 +59,9 @@
     "jaAddress": "〒550-0002<br />大阪府大阪市西区江戸堀2-1-1<br />江戸堀センタービル9階",
     "BuildingName": "西区 - 江戸堀センタービル ",
     "largeImageUrl": "edobori-center-building.jpg",
-    "price":"12,100円", 
-    "communicationsPlan": "11,000円",
-    "addressPlan":"10,000円"
+    "price":"¥24,200", 
+    "communicationsPlan": "¥11,000",
+    "addressPlan":"¥10,000"
 }, {
     "name": "MLC Centre",
     "namae": "MLCセンター",
